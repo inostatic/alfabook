@@ -1,6 +1,6 @@
 import {combineReducers, createStore} from "redux";
 import {filtersReducer} from "./reducers/filtersReducer";
-import {booksReducer} from "./reducers/booksReducers";
+import {booksReducer} from "./reducers/booksReducer";
 
 
 let rootReducer = combineReducers({
