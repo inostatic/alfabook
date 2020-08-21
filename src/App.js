@@ -7,14 +7,12 @@ import {Route} from "react-router-dom";
 import {AddBook} from "./pages/AddBook";
 import {SelectBook} from "./pages/SelectBook";
 import {useDispatch} from "react-redux";
-import {getBooks} from "./API/API";
-import {setBooksAC} from "./redux/action/books";
-import {transformObjectToArray} from "./utils";
+import {fetchBooks} from "./redux/action/books";
 
 const App = () => {
     const dispatch = useDispatch()
     useEffect(() => {
-        getBooks().then(r => dispatch(setBooksAC(transformObjectToArray(r))))
+        dispatch(fetchBooks())
     }, [])
 
   return (

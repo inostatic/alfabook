@@ -1,10 +1,13 @@
-import React, {useState} from "react"
+import React from "react"
 
-export const Categories = ({categories, onClickItem}) => {
-    const [activeItem, setActiveItem] = useState(null)
+
+
+export const Categories = React.memo(({categories, onClickItem}) => {
+    const [activeItem, setActiveItem] = React.useState(null)
 
     const onSelectItem = (index) => {
         setActiveItem(index)
+        onClickItem(index)
     }
 
     return (
@@ -15,7 +18,7 @@ export const Categories = ({categories, onClickItem}) => {
                 >Все
                 </li>
                 {
-                     categories &&
+                    categories &&
                     categories.map((el, index) => <li className={activeItem === index ? 'target' : ''}
                                                       onClick={() => onSelectItem(index)}
                                                       key={`${index}_${el}`}>{el}</li>)
@@ -23,4 +26,4 @@ export const Categories = ({categories, onClickItem}) => {
             </ul>
         </div>
     )
-}
+})

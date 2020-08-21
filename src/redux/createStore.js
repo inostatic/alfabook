@@ -1,6 +1,7 @@
-import {combineReducers, createStore} from "redux";
+import {combineReducers, compose, createStore, applyMiddleware} from "redux";
 import {filtersReducer} from "./reducers/filtersReducer";
 import {booksReducer} from "./reducers/booksReducer";
+import thunk from "redux-thunk";
 
 
 let rootReducer = combineReducers({
@@ -8,8 +9,13 @@ let rootReducer = combineReducers({
     booksReducer
 })
 
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+
+
+
 export const store = createStore(
-    rootReducer, /* preloadedState, */
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    rootReducer,
+    composeEnhancers(applyMiddleware(thunk))
+
 );
 window.store = store

@@ -1,14 +1,14 @@
 import React, {useEffect, useState} from "react"
-import {getSelectBook} from "../API/API";
+import {getSelectedBook} from "../API/API";
 
 export const SelectBook = (props) => {
     const [book, setBook] = useState(null)
 
     useEffect(() => {
-        getSelectBook(props.location.book_id).then(setBook)
+        getSelectedBook(props.location.book_id).then(setBook)
     }, [])
 
-    console.log(book)
+
     return (
         book &&
         <div className='select__book'>

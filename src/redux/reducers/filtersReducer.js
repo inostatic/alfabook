@@ -2,7 +2,7 @@ export const SET_CATEGORY = 'SET_CATEGORY'
 export const SET_SORT_BY = 'SET_SORT_BY'
 
 let initialState = {
-    typeFilter: 0,
+    typeFilter: null,
     sortBy: 'popular'
 }
 

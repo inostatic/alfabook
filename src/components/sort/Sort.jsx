@@ -1,10 +1,10 @@
-import React, {useEffect, useRef, useState} from "react"
+import React from "react"
 import arrow from "../../assets/images/arrow.svg"
 
-export const Sort = ({sortItems}) => {
-    const [visibleMenu, setVisibleMenu] = useState(false)
-    const [activeItem, setActiveItem] = useState(0)
-    const sortRef = useRef()
+export const Sort = React.memo(({sortItems}) => {
+    const [visibleMenu, setVisibleMenu] = React.useState(false)
+    const [activeItem, setActiveItem] = React.useState(0)
+    const sortRef = React.useRef()
 
     const toggleVisibleMenu = () => {
         setVisibleMenu(!visibleMenu)
@@ -21,7 +21,7 @@ export const Sort = ({sortItems}) => {
         }
     }
 
-    useEffect(() => {
+    React.useEffect(() => {
         document.body.addEventListener('click', handleOutsideClick)
     }, [])
 
@@ -33,17 +33,17 @@ export const Sort = ({sortItems}) => {
                 <span>{sortItems[activeItem]}</span>
             </div>
             {visibleMenu &&
-                <div className="sort__menu">
+            <div className="sort__menu">
                 <ul>
                     {
                         sortItems &&
                         sortItems.map((el, index) => <li className={activeItem === index ? 'active' : ''}
-                                                          onClick={() => onSelectItem(index)}
-                                                          key={`${index}_${el}`}>{el}</li>)
+                                                         onClick={() => onSelectItem(index)}
+                                                         key={`${index}_${el}`}>{el}</li>)
                     }
                 </ul>
             </div>
             }
         </div>
     )
-}
+})

@@ -23,6 +23,6 @@ export const getBooks = () => {
 
 }
 
-export const getSelectBook = (token) => {
+export const getSelectedBook = (token) => {
     return firebase.database().ref('books/' + token).once('value').then(r => r.val())
 }
