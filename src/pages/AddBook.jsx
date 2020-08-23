@@ -1,5 +1,7 @@
 import React, {useState} from "react"
-import {addBook} from "../API/API";
+import {addBook, addBookInCategory} from "../API/API";
+import {useSelector} from "react-redux";
+import {createToken} from "../utils";
 
 export const AddBook = () => {
     const [name, setName] = useState('')
@@ -12,10 +14,18 @@ export const AddBook = () => {
     const [pagesCount, setPagesCount] = useState('')
     const [publicationDate, setPublicationDate] = useState('')
 
+
+    // const {books} = useSelector(({booksReducer}) => {
+    //     return {
+    //         books: booksReducer.books
+    //     }
+    // })
     const add = (e) => {
         e.preventDefault()
         if (name && author && category && src && price && description && cover && pagesCount && publicationDate) {
-            addBook(name, author, category, src, price, description, cover, pagesCount, publicationDate)
+            const token = createToken()
+            addBook(name, author, category, src, price, description, cover, pagesCount, publicationDate, token)
+            addBookInCategory(name, author, category, src, price, description, cover, pagesCount, publicationDate, token)
             setName('')
             // setCategory('')
             setSrc('')
@@ -24,9 +34,17 @@ export const AddBook = () => {
             setCover('')
             setPagesCount('')
             setPublicationDate('')
-            setAuthor('')
         }
+            setAuthor('')
     }
+
+    // const end = () => {
+    //     for ( let i = 0; i < books.length; i++) {
+    //         const token = createToken()
+    //         addBookInCategory(books[i].name, books[i].author, books[i].category, books[i].src, books[i].price, books[i].description, books[i].cover, books[i].pagesCount, books[i].publicationDate, token)
+    //         addBook(books[i].name, books[i].author, books[i].category, books[i].src, books[i].price, books[i].description, books[i].cover, books[i].pagesCount, books[i].publicationDate, token)
+    //     }
+    // }
 
     return (
         <div className="add">

@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import './App.scss'
 import {Header} from "./components/header/header"
 import {Home} from "./pages/Home";
@@ -6,14 +6,10 @@ import {Cart} from "./pages/Cart";
 import {Route} from "react-router-dom";
 import {AddBook} from "./pages/AddBook";
 import {SelectBook} from "./pages/SelectBook";
-import {useDispatch} from "react-redux";
-import {fetchBooks} from "./redux/action/books";
+
+
 
 const App = () => {
-    const dispatch = useDispatch()
-    useEffect(() => {
-        dispatch(fetchBooks())
-    }, [])
 
   return (
     <div className="wrapper">

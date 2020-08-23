@@ -12,8 +12,8 @@ firebase.initializeApp({
     appId: "1:197702886132:web:df1a050378e0f968e7b4a1"
 });
 
-export const addBook = async (name, author, category, src, price, description, cover, pagesCount, publicationDate) => {
-    firebase.database().ref(`books`).push({
+export const addBook = async (name, author, category, src, price, description, cover, pagesCount, publicationDate, token) => {
+    firebase.database().ref(`books/` + token).set({
         name, author, category, src, price, description, cover, pagesCount, publicationDate
     }).catch(e => console.log('addPhoto Error:', e))
 }
@@ -22,7 +22,17 @@ export const getBooks = () => {
     return firebase.database().ref('books').once('value').then(r => r.val())
 
 }
+export const getCategoryBooks = (category) => {
+    return firebase.database().ref('category/' + category).once('value').then(r => r.val())
+
+}
 
 export const getSelectedBook = (token) => {
     return firebase.database().ref('books/' + token).once('value').then(r => r.val())
+}
+
+export const addBookInCategory = (name, author, category, src, price, description, cover, pagesCount, publicationDate, token) => {
+    firebase.database().ref('category/' + category + '/' + token).set({
+        name, author, category, src, price, description, cover, pagesCount, publicationDate
+    }).catch(e => console.log('addBookCategory Error:', e))
 }

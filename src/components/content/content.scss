@@ -13,21 +13,19 @@
       li {
         background-color: #F2D59F;
         padding: 10px 30px;
-        border-radius: 30px;
+        border-radius: 5px;
         border: 2px solid #F2D59F;
         margin-right: 10px;
         font-weight: bold;
         cursor: pointer;
 
         &:hover {
-          //border: 2px solid #725b5b;
           background-color: #ffe2aa;
         }
       }
 
       .target {
         border: 2px solid #725b5b;
-        //background-color: #f2e671;
       }
     }
   }
