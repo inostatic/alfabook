@@ -2,29 +2,35 @@ import React from "react"
 import PropTypes from "prop-types"
 import {Link} from "react-router-dom";
 
-const Item = (props) => {
+const Item = ({item, sendBookToCart}) => {
+
+    const sendBook = () => {
+        sendBookToCart(item)
+    }
 
     return (
-        <Link to={{
-            pathname: 'book',
-            book_id: props.token
-        }}>
-            <div className="item">
-                <img src={props.src} alt="#"/>
-                <div>{props.name}</div>
-                <div className="item__bottom">
-                    <div>{props.price}₽</div>
-                    <div>Купить</div>
-                </div>
+
+        <div className="item">
+            <Link to={{
+                pathname: 'book',
+                book_id: item.token
+            }}>
+                <img src={item.src} alt="#"/>
+            </Link>
+            <div>{item.name}</div>
+            <div className="item__bottom">
+                <div>{item.price}₽</div>
+                <button onClick={sendBook}>Купить</button>
             </div>
-        </Link>
+        </div>
+
     )
 }
 
-Item.propTypes = {
-    name : PropTypes.string.isRequired,
+/*Item.propTypes = {
+    name: PropTypes.string.isRequired,
     src: PropTypes.string.isRequired,
     price: PropTypes.string.isRequired
-}
+}*/
 
 export default Item

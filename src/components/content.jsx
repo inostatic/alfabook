@@ -3,7 +3,7 @@ import Item from "./item";
 import { useSelector} from "react-redux";
 
 
-export const Content = () => {
+export const Content = ({sendBookToCart}) => {
     const {books} = useSelector(({booksReducer}) => {
         return {
             books: booksReducer.books
@@ -17,7 +17,7 @@ export const Content = () => {
                 <div className="content__items">
 
                     {books &&
-                    books.map((item, index) => <Item key={index} {...item}/>)
+                    books.map((item, index) => <Item key={index} item={item} sendBookToCart={sendBookToCart}/>)
                     }
                 </div>
             </div>

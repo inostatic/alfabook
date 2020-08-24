@@ -1,5 +1,6 @@
 @import "variables";
 
+
 .header {
   .container {
     display: flex;
@@ -27,7 +28,7 @@
       }
       p {
 
-        color: #7b7b7b;;
+        color: $title-color;
       }
     }
   }

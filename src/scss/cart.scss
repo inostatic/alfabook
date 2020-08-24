@@ -1,1 +1,121 @@
 @import "variables";
+
+.cart {
+  margin: 0 150px;
+  .cart__title {
+      display: flex;
+      justify-content: space-between;
+    div:first-child{
+      font-size: 24px;
+      font-weight: bold;
+      padding: 10px 0;
+    }
+    div:last-child {
+      font-weight: bold;
+      color: $btn-color;
+      cursor: pointer;
+    }
+
+  }
+
+  .cart__elem {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+
+    img {
+      height: 100px;
+    }
+    .cart__info {
+      padding-top: 20px;
+      .cart__name {
+        font-size: 18px;
+        text-align: left;
+      }
+      .cart__author {
+        text-align: left;
+        font-size: 14px;
+        color: $title-color;
+      }
+    }
+
+    .cart__count {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 20px;
+      .cart__button {
+        border: 1px solid $last-color;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        font-weight: bold;
+        font-size: 19px;
+        cursor: pointer;
+        color: $last-color;
+        &:hover {
+          color: white;
+          background: $last-color;
+        }
+      }
+      .cart__counter {
+        font-size: 18px;
+        font-weight: bold;
+        height: 30px;
+        width: 30px;
+        padding-top: 4px;
+      }
+    }
+
+    .cart__price {
+      padding-top: 25px;
+      font-weight: bold;
+    }
+
+    .cart__delete {
+      margin-top: 25px;
+      font-size: 18px;
+      font-weight: bold;
+      height: 30px;
+      width: 30px;
+      color: $btn-color;
+      cursor: pointer;
+      &:hover {
+        color: black;
+      }
+    }
+
+  }
+  .cart__sum {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  .cart__footer {
+      display: flex;
+      justify-content: space-between;
+      padding: 30px 0;
+      div {
+        padding-top: 15px;
+        height: 40px;
+        width: 160px;
+        border-radius: 50px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        color: $btn-color;
+        text-align: left;
+      }
+      .right {
+        background: $last-color;
+        color: white;
+        border-radius: 1px solid  $last-color;
+        text-align: center;
+        &:hover {
+          background: $first-color;
+        }
+      }
+
+  }
+
+
+}

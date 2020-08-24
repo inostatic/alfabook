@@ -33,18 +33,19 @@
       font-weight: 600;
     }
 
-    div:last-child {
+    button {
       height: auto;
-      padding: 7px 15px 0 15px;
+      border: none;
       cursor: pointer;
-      font-weight: 600;
+      font-weight: 300;
+      font-size: 15px;
       background: $last-color;
       border-radius: 3px;
       color: white;
-      font-weight: 300;
 
       &:hover {
         background: $first-color;
+        border: none;
       }
     }
   }
