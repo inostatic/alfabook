@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< Updated upstream
       <module fileurl="file://$PROJECT_DIR$/.idea/alfabook.iml" filepath="$PROJECT_DIR$/.idea/alfabook.iml" />
+=======
+<<<<<<< HEAD
+      <module fileurl="file://$PROJECT_DIR$/.idea/Alfabook.iml" filepath="$PROJECT_DIR$/.idea/Alfabook.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/alfabook.iml" filepath="$PROJECT_DIR$/.idea/alfabook.iml" />
+>>>>>>> redux
+>>>>>>> Stashed changes
     </modules>
   </component>
 </project>
