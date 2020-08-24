@@ -1,27 +1,37 @@
 import React from "react"
+import PropTypes from "prop-types"
 
 
 
-export const Categories = React.memo(({categories, onClickItem, typeFilter}) => {
+export const Categories = React.memo(({categories, onClickCategory, typeFilter}) => {
 
-    const onSelectItem = (index) => {
-        onClickItem(index)
-    }
 
     return (
         <div className="categories">
             <ul>
                 <li className={typeFilter === null ? 'target' : ''}
-                    onClick={() => onSelectItem(null)}
+                    onClick={() => onClickCategory(null)}
                 >Все
                 </li>
                 {
                     categories &&
                     categories.map((el, index) => <li className={typeFilter === index ? 'target' : ''}
-                                                      onClick={() => onSelectItem(index)}
+                                                      onClick={() => onClickCategory(index)}
                                                       key={`${index}_${el}`}>{el}</li>)
                 }
             </ul>
         </div>
     )
 })
+
+
+Categories.defaultProps = {
+    typeFilter: null,
+    categories: []
+}
+
+Categories.propTypes = {
+    typeFilter: PropTypes.number,
+    categories: PropTypes.arrayOf(PropTypes.string).isRequired,
+    onClickCategory: PropTypes.func.isRequired
+}

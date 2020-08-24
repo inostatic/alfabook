@@ -4,7 +4,7 @@ export const SET_LOADED = 'SET_LOADED'
 
 let initialState = {
     typeFilter: null,
-    sortBy: 'popular'
+    sortBy: 0
 }
 
 export const filtersReducer = (state = initialState, action) => {

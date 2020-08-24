@@ -1,9 +1,10 @@
 import React from "react"
 import arrow from "../../assets/images/arrow.svg"
+import PropTypes from "prop-types";
 
-export const Sort = React.memo(({sortItems}) => {
+
+export const Sort = React.memo(({sortItems, sortBy, onClickSetActiveItem}) => {
     const [visibleMenu, setVisibleMenu] = React.useState(false)
-    const [activeItem, setActiveItem] = React.useState(0)
     const sortRef = React.useRef()
 
     const toggleVisibleMenu = () => {
@@ -11,7 +12,7 @@ export const Sort = React.memo(({sortItems}) => {
     }
 
     const onSelectItem = (index) => {
-        setActiveItem(index)
+        onClickSetActiveItem(index)
         setVisibleMenu(false)
     }
 
@@ -30,14 +31,14 @@ export const Sort = React.memo(({sortItems}) => {
             <div className="sort__label" onClick={() => toggleVisibleMenu()}>
                 <img src={arrow} alt="#" className={visibleMenu ? 'rotated' : ''}/>
                 <b>Сортировка по:</b>
-                <span>{sortItems[activeItem]}</span>
+                <span>{sortItems[sortBy]}</span>
             </div>
             {visibleMenu &&
             <div className="sort__menu">
                 <ul>
                     {
                         sortItems &&
-                        sortItems.map((el, index) => <li className={activeItem === index ? 'active' : ''}
+                        sortItems.map((el, index) => <li className={sortBy === index ? 'active' : ''}
                                                          onClick={() => onSelectItem(index)}
                                                          key={`${index}_${el}`}>{el}</li>)
                     }
@@ -47,3 +48,14 @@ export const Sort = React.memo(({sortItems}) => {
         </div>
     )
 })
+
+Sort.defaultProps = {
+    sortItems: [],
+    sortBy: 0
+}
+
+Sort.propTypes = {
+    sortItems: PropTypes.array.isRequired,
+    sortBy: PropTypes.number.isRequired,
+    onClickSetActiveItem: PropTypes.func.isRequired
+}
