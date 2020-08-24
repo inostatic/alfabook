@@ -31,7 +31,7 @@ export const Home = () => {
         } else {
             dispatch(fetchCategoryBooks(typeFilter))
         }
-    }, [typeFilter])
+    }, [typeFilter, dispatch])
 
 
 

@@ -6,7 +6,7 @@ export const SelectBook = (props) => {
 
     useEffect(() => {
         getSelectedBook(props.location.book_id).then(setBook)
-    }, [])
+    }, [props.location.book_id])
 
 
     return (

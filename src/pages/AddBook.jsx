@@ -1,6 +1,5 @@
 import React, {useState} from "react"
 import {addBook, addBookInCategory} from "../API/API";
-import {useSelector} from "react-redux";
 import {createToken} from "../utils";
 
 export const AddBook = () => {
