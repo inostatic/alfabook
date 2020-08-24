@@ -1,5 +1,5 @@
 import React from "react"
-import arrow from "../../assets/images/arrow.svg"
+import arrow from "../assets/images/arrow.svg"
 import PropTypes from "prop-types";
 
 

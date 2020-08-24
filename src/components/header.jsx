@@ -1,7 +1,6 @@
 import React from "react"
-import "./header.scss"
-import logo from "../../assets/images/icon.svg"
-import cart from  "../../assets/images/cart.svg"
+import logo from "../assets/images/icon.svg"
+import cart from "../assets/images/cart.svg"
 import {NavLink} from "react-router-dom";
 
 export const Header = () => {

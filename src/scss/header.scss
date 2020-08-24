@@ -1,3 +1,4 @@
+@import "variables";
 
 .header {
   .container {
@@ -34,7 +35,7 @@
     display: flex;
     margin: 20px;
     padding: 12px 25px;
-    background-color: #249ace;
+    background-color: $last-color;
     border-radius: 3px;
     cursor: pointer;
     color: white;
@@ -42,7 +43,7 @@
     align-items: center;
 
     &:hover {
-      background-color: #26A9E0;
+      background-color: $first-color;
     }
 
     img {

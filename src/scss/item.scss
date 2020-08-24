@@ -1,0 +1,51 @@
+@import "variables";
+
+.item {
+  width: 230px;
+  height: 340px;
+  border: 1px solid #d3d3d3;
+  margin-bottom: 30px;
+
+  &:hover {
+    box-shadow: 0 0 2px;
+  }
+
+  img {
+    padding: 20px 0 0 0;
+    height: 210px;
+    cursor: pointer;
+  }
+
+  div {
+    margin-top: 5px;
+    font-size: 15px;
+    height: 40px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .item__bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px 0 10px;
+
+    div:first-child {
+      font-weight: 600;
+    }
+
+    div:last-child {
+      height: auto;
+      padding: 7px 15px 0 15px;
+      cursor: pointer;
+      font-weight: 600;
+      background: $last-color;
+      border-radius: 3px;
+      color: white;
+      font-weight: 300;
+
+      &:hover {
+        background: $first-color;
+      }
+    }
+  }
+}

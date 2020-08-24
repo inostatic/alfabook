@@ -1,7 +1,7 @@
 import React, {useCallback, useEffect} from "react"
-import {Categories} from "../components/categories/Categories";
-import {Sort} from "../components/sort/Sort";
-import {Content} from "../components/content/content";
+import {Categories} from "../components/Categories";
+import {Sort} from "../components/Sort";
+import {Content} from "../components/content";
 import {useDispatch, useSelector} from "react-redux";
 import {changeFilterAC, sortByAC} from "../redux/action/filters";
 import {fetchBooks, fetchCategoryBooks} from "../redux/action/books";

@@ -1,0 +1,23 @@
+@import 'header';
+@import 'content';
+@import 'item';
+@import 'add';
+@import 'selectBook';
+@import 'categories';
+@import 'sort';
+
+
+* {
+  margin: 0;
+}
+.wrapper {
+  text-align: center;
+  width: calc(100vw - 100px);
+  height: 100%;
+  background-color: #fff;
+  margin: 0 auto;
+  border-radius: 10px;
+  max-width: 1400px;
+}
+
+

@@ -1,8 +1,6 @@
 import React from "react"
-import "./content.scss"
-import Item from "../item/item";
+import Item from "./item";
 import { useSelector} from "react-redux";
-
 
 
 export const Content = () => {
@@ -11,7 +9,6 @@ export const Content = () => {
             books: booksReducer.books
         }
     })
-
 
     return (
         <div className="content">

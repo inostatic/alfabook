@@ -1,6 +1,6 @@
 import React from 'react'
-import './App.scss'
-import {Header} from "./components/header/header"
+import './scss/index.scss'
+import {Header} from "./components/header"
 import {Home} from "./pages/Home";
 import {Cart} from "./pages/Cart";
 import {Route} from "react-router-dom";
