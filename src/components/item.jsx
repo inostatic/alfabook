@@ -5,7 +5,13 @@ import {Link} from "react-router-dom";
 const Item = ({item, sendBookToCart}) => {
 
     const sendBook = () => {
-        sendBookToCart(item)
+        sendBookToCart({
+            token: item.token,
+            author: item.author,
+            name: item.name,
+            price: item.price,
+            src: item.src
+        })
     }
 
     return (
@@ -13,7 +19,8 @@ const Item = ({item, sendBookToCart}) => {
         <div className="item">
             <Link to={{
                 pathname: 'book',
-                book_id: item.token
+                book_id: item.token,
+                sendBook
             }}>
                 <img src={item.src} alt="#"/>
             </Link>

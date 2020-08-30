@@ -21,28 +21,35 @@
   .cart__elem {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
     padding: 10px 0;
+
 
     img {
       height: 100px;
     }
     .cart__info {
-      padding-top: 20px;
+      width: 400px;
+
       .cart__name {
         font-size: 18px;
         text-align: left;
+
       }
       .cart__author {
         text-align: left;
         font-size: 14px;
         color: $title-color;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
     }
 
     .cart__count {
       display: flex;
       justify-content: space-between;
-      padding-top: 20px;
+      align-items: center;
       .cart__button {
         border: 1px solid $last-color;
         height: 30px;
@@ -62,17 +69,16 @@
         font-weight: bold;
         height: 30px;
         width: 30px;
-        padding-top: 4px;
+        padding-top: 6px;
       }
     }
 
     .cart__price {
-      padding-top: 25px;
       font-weight: bold;
     }
 
     .cart__delete {
-      margin-top: 25px;
+      padding-top: 7px;
       font-size: 18px;
       font-weight: bold;
       height: 30px;
@@ -93,17 +99,29 @@
   .cart__footer {
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
       padding: 30px 0;
       div {
         padding-top: 15px;
         height: 40px;
         width: 160px;
-        border-radius: 50px;
+        border-radius: 5px;
         cursor: pointer;
         font-size: 16px;
         font-weight: bold;
-        color: $btn-color;
-        text-align: left;
+        text-align: center;
+        background: lightgrey;
+        margin: 5px 0;
+      }
+      .left {
+        color: #505050;
+        &:visited {
+          color: #505050;
+        }
+        &:hover {
+          background: #d6d6d6;
+          color: #000000;
+        }
       }
       .right {
         background: $last-color;

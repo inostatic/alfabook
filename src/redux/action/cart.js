@@ -1,5 +1,6 @@
-import {ADD_BOOK_TO_CART, SET_TOTAL_COUNT, SET_TOTAL_PRICE} from "../reducers/cartReducer";
+import {ADD_BOOK_TO_CART, CLEAR_CART, REMOVE_CART_ITEM} from "../reducers/cartReducer";
 
-export const setTotalPriceAC = (payload) => ({type: SET_TOTAL_PRICE, payload})
-export const setTotalCountAC = (payload) => ({type: SET_TOTAL_COUNT, payload})
+
 export const addBookAC = (payload) => ({type: ADD_BOOK_TO_CART, payload})
+export const clearCartAC = () => ({type: CLEAR_CART})
+export const removeCartItemAC = (payload) => ({type: REMOVE_CART_ITEM, payload})

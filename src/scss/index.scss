@@ -10,6 +10,17 @@
 * {
   margin: 0;
 }
+a {
+  text-decoration: none;
+  &:visited {
+    color: #000000;
+  }
+}
+
+button:active, button:focus {
+  outline: none;
+}
+
 .wrapper {
   text-align: center;
   width: calc(100vw - 100px);
