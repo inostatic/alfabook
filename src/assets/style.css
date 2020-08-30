@@ -1,0 +1,28 @@
+body {
+    background: #0f7ad0;
+    /*padding: 50px 250px 50px 250px;*/
+}
+
+.wrapper {
+    background: white;
+    border-radius: 2px;
+    margin: 50px 250px 50px 250px;
+}
+
+.container {
+
+}
+
+
+.header {
+    display: flex;
+    padding: 50px;
+}
+
+.header__logo {
+    display: flex;
+}
+
+#img_logo {
+    width: 30px;
+}

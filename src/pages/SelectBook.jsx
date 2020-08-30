@@ -1,14 +1,14 @@
 import React, {useEffect, useState} from "react"
-import {getSelectBook} from "../API/API";
+import {getSelectedBook} from "../API/API";
 
 export const SelectBook = (props) => {
     const [book, setBook] = useState(null)
 
     useEffect(() => {
-        getSelectBook(props.location.book_id).then(setBook)
-    }, [])
+        getSelectedBook(props.location.book_id).then(setBook)
+    }, [props.location.book_id])
 
-    console.log(book)
+
     return (
         book &&
         <div className='select__book'>
@@ -20,7 +20,7 @@ export const SelectBook = (props) => {
                 <div className='select__elem'>Дата публикации: {book.publicationDate} год</div>
                 <div className='select__elem'>Анотация: {book.description}</div>
                 <div className='select__elem'>Цена: {book.price}руб.</div>
-                <button>Купить</button>
+                <button onClick={props.location.sendBook}>Купить</button>
             </div>
         </div>
 

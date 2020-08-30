@@ -1,0 +1,44 @@
+@import "variables";
+
+.select__book {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  img {
+    width: 500px;
+    margin: 50px;
+  }
+
+  .select__right {
+    width: 500px;
+    text-align: left;
+    margin: 50px;
+
+    .select__name {
+      font-size: 28px;
+      font-weight: bold;
+      padding-bottom: 30px;
+    }
+    .select__elem {
+      padding-bottom: 20px;
+      font-size: 18px;
+    }
+    button {
+      float: right;
+      height: 40px;
+      width: 85px;
+      font-size: 20px;
+      text-align: left;
+      padding: 0 0 0 10px;
+      color: white;
+      background-color: $last-color;
+      border-radius: 3px;
+      border: $last-color;
+      cursor: pointer;
+      &:hover {
+        background-color: $first-color;
+      }
+    }
+  }
+}

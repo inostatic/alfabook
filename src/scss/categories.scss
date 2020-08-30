@@ -1,0 +1,31 @@
+@import "variables";
+
+.categories {
+  padding: 0 0 15px 0;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    color: #5E2A41;
+
+    li {
+      background-color: $category-color;
+      padding: 10px 30px;
+      border-radius: 5px;
+      border: 2px solid $category-color;
+      //margin-right: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      margin: 0 10px 10px 0;
+
+      &:hover {
+        background-color: #ffe2aa;
+      }
+    }
+
+    .target {
+      border: 2px solid #725b5b;
+    }
+  }
+}

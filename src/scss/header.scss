@@ -1,3 +1,5 @@
+@import "variables";
+
 
 .header {
   .container {
@@ -26,7 +28,7 @@
       }
       p {
 
-        color: #7b7b7b;;
+        color: $title-color;
       }
     }
   }
@@ -34,17 +36,16 @@
     display: flex;
     margin: 20px;
     padding: 12px 25px;
-    //background-color: #FF7124;
-    background-color: #249ace;
-    //border-radius: 30px;
-    border-radius: 10px;
+    background-color: $last-color;
+    border-radius: 3px;
     cursor: pointer;
     color: white;
     font-weight: 600;
     align-items: center;
 
+
     &:hover {
-      background-color: #26A9E0;
+      background-color: $first-color;
     }
 
     img {

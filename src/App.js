@@ -1,11 +1,12 @@
 import React from 'react'
-import './App.scss'
-import {Header} from "./components/header/header"
+import './scss/index.scss'
+import {Header} from "./components/header"
 import {Home} from "./pages/Home";
 import {Cart} from "./pages/Cart";
 import {Route} from "react-router-dom";
 import {AddBook} from "./pages/AddBook";
 import {SelectBook} from "./pages/SelectBook";
+
 
 const App = () => {
 
@@ -21,3 +22,4 @@ const App = () => {
 }
 
 export default App
+

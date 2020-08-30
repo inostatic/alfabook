@@ -1,0 +1,139 @@
+@import "variables";
+
+.cart {
+  margin: 0 150px;
+  .cart__title {
+      display: flex;
+      justify-content: space-between;
+    div:first-child{
+      font-size: 24px;
+      font-weight: bold;
+      padding: 10px 0;
+    }
+    div:last-child {
+      font-weight: bold;
+      color: $btn-color;
+      cursor: pointer;
+    }
+
+  }
+
+  .cart__elem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 0;
+
+
+    img {
+      height: 100px;
+    }
+    .cart__info {
+      width: 400px;
+
+      .cart__name {
+        font-size: 18px;
+        text-align: left;
+
+      }
+      .cart__author {
+        text-align: left;
+        font-size: 14px;
+        color: $title-color;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    .cart__count {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .cart__button {
+        border: 1px solid $last-color;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        font-weight: bold;
+        font-size: 19px;
+        cursor: pointer;
+        color: $last-color;
+        &:hover {
+          color: white;
+          background: $last-color;
+        }
+      }
+      .cart__counter {
+        font-size: 18px;
+        font-weight: bold;
+        height: 30px;
+        width: 30px;
+        padding-top: 6px;
+      }
+    }
+
+    .cart__price {
+      font-weight: bold;
+    }
+
+    .cart__delete {
+      padding-top: 7px;
+      font-size: 18px;
+      font-weight: bold;
+      height: 30px;
+      width: 30px;
+      color: $btn-color;
+      cursor: pointer;
+      &:hover {
+        color: black;
+      }
+    }
+
+  }
+  .cart__sum {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  .cart__footer {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 30px 0;
+      div {
+        padding-top: 15px;
+        height: 40px;
+        width: 160px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        background: lightgrey;
+        margin: 5px 0;
+      }
+      .left {
+        color: #505050;
+        &:visited {
+          color: #505050;
+        }
+        &:hover {
+          background: #d6d6d6;
+          color: #000000;
+        }
+      }
+      .right {
+        background: $last-color;
+        color: white;
+        border-radius: 1px solid  $last-color;
+        text-align: center;
+        &:hover {
+          background: $first-color;
+        }
+      }
+
+  }
+
+
+}
